@@ -1,0 +1,15 @@
+name: Wait and Succeed
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  wait:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait 1 minute
+        run: sleep 60
+
+      - name: Success
+        run: echo "Done!"
